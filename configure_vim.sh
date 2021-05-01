@@ -6,7 +6,7 @@ mkdir -p ~/.vim
 mkdir -p ~/.vim/core
 mkdir -p ~/.vim/autoload
 
-cd ~/.vim/autoload && wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && cd ~
+wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -P ~/.vim/autoload/
 
 cat <<EOT >> ~/.vim/vimrc
 filetype plugin on
