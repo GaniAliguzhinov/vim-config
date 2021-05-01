@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "alias vi=\"vim\"" >> ~/.bashrc
-
 mkdir -p ~/.vim
 mkdir -p ~/.vim/core
 mkdir -p ~/.vim/autoload
