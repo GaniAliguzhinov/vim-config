@@ -19,7 +19,7 @@ let g:airline#extensions#lsp#enabled = 1
 " extracted from https://vi.stackexchange.com/a/9637/15292
 let g:airline_skip_empty_sections = 1
 " Whether to use powerline symbols, see https://vi.stackexchange.com/q/3359/15292
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
