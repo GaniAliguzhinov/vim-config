@@ -8,4 +8,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim'
     Plug 'ayu-theme/ayu-vim' " or other package manager
     Plug 'ajmwagar/vim-deus'
+    Plug 'fladson/vim-kitty'
 call plug#end()
