@@ -7,3 +7,4 @@ set t_Co=256
 set background=dark    " Setting dark mode
 colorscheme deus
 let g:deus_termcolors=256
+let &t_ut=''
