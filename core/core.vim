@@ -31,7 +31,12 @@ set formatoptions+=mM
 set tildeop
 set nojoinspaces
 
-set synmaxcol=200  " Text after this column number is not highlighted
+set synmaxcol=1000  " Text after this column number is not highlighted
+set ttyfast " u got a fast terminal
+set ttyscroll=3
+set re=1
+set lazyredraw " to avoid scrolling problems
+
 set nostartofline
 
 set title
