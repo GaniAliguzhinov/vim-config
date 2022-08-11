@@ -1,6 +1,7 @@
 #!/bin/bash
 
-mkdir -p ~/.vim
+SEP="=============================="
+
 mkdir -p ~/.vim/core
 mkdir -p ~/.vim/autoload
 
@@ -17,12 +18,6 @@ source ~/.vim/core/complete.vim
 source ~/.vim/core/mappings.vim
 EOT
 
-cp core/airline.vim ~/.vim/core/
-cp core/complete.vim ~/.vim/core/
-cp core/core.vim ~/.vim/core/
-cp core/mappings.vim ~/.vim/core/
-cp core/plugins.vim ~/.vim/core/
-cp core/theme.vim ~/.vim/core/
-cp core/utils.vim ~/.vim/core/
+cp core/*.vim ~/.vim/core/
 
-# Now, do vim and :PlugInstall
+echo -e "\n$SEP\nNow please run vim, and in the normal mode, run command :PlugInstall\n$SEP\n"
