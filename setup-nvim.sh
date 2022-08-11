@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SEP="=============================="
+
 mkdir -p ~/.config/nvim/core
 mkdir -p ~/.local/share/nvim/site/autoload
 
@@ -18,4 +20,5 @@ EOT
 
 cp core/*.vim ~/.config/nvim/core/
 
-# Now, do vim and :PlugInstall
+echo -e "\n$SEP\nNow please run nvim, and in the normal mode, run command :PlugInstall"
+echo -e "\nConsider aliasing \`alias vim='nvim'\`\n$SEP\n"
