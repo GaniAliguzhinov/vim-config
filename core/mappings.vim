@@ -4,12 +4,11 @@
 " used by vim-sneak
 nnoremap ; :
 xnoremap ; :
+let mapleader = " " " map leader to Space
 
-" Move the cursor based on physical lines, not the actual lines.
-nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
-nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
-nnoremap ^ g^
-nnoremap 0 g0
+" Move cursor by visual lines with Shift (for very long lines)
+nnoremap J gj
+nnoremap K gk
 
 " Do not include white space characters when using $ in visual mode,
 " see https://vi.stackexchange.com/q/12607/15292
@@ -43,3 +42,34 @@ xnoremap <C-H> :s/
 
 " Decrease indent level in insert mode with shift+tab
 inoremap <S-Tab> <ESC><<i
+
+" Strip whitespace
+nnoremap <leader>w :call utils#StripTrailingWhitespaces()<CR>
+
+" Highlight lines over char limit
+nnoremap <leader>l :call ToggleHighlightLongLines()<CR>
+
+" Highlight search results
+nnoremap <leader>h :call ToggleHighlight()<CR>
+
+
+" CoC completion
+
+" Run on init:
+" :CocInstall coc-java
+" :CocInstall coc-json
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)

@@ -9,4 +9,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'ayu-theme/ayu-vim' " or other package manager
     Plug 'ajmwagar/vim-deus'
     Plug 'fladson/vim-kitty'
+" Language servers
+    " After pip3 install --user pynvim:
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()

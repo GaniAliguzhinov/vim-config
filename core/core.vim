@@ -1,8 +1,7 @@
 set backspace=indent,eol,start  " Allow backspace in insert mode
 scriptencoding utf-8
 set splitbelow splitright
-" set clipboard=unnamedplus
-set clipboard+=unnamedplus
+set clipboard=unnamed
 set noswapfile
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
@@ -34,6 +33,7 @@ set nojoinspaces
 
 set synmaxcol=1000  " Text after this column number is not highlighted
 set ttyfast " u got a fast terminal
+" set ttyscroll=3
 set re=1
 set lazyredraw " to avoid scrolling problems
 
@@ -49,6 +49,6 @@ set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for autoindent
 set expandtab       " expand tab to spaces so that tabs are spaces
 
-
 set mouse=a
+
 set re=0            " prevent hanging when opening typescript files :O https://vi.stackexchange.com/a/28721
