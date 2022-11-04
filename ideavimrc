@@ -1,0 +1,47 @@
+""" Based on https://towardsdatascience.com/the-essential-ideavim-remaps-291d4cd3971b
+""" defaults write -g ApplePressAndHoldEnabled -bool false # Disable apple style long-press
+
+""" Clipboard settigns
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+""" Set leader key to later template commands
+let mapleader=" "
+
+""" Window Navigation
+""" ctrl-z for distraction free
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+""" ctrl-t -> Terminal
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <c-]> :action NextTab<CR>
+nnoremap <c-[> :action PreviousTab<CR>
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+
+""" Refactoring
+set ideajoin
+set idearefactormode=keep
+
+nnoremap <leader>=  :action ReformatCode<CR>
+nnoremap <leader>o :action OptimizeImports<CR>
+""" Main tool for refactoring: " r" to show refactoring menu
+nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+
+nnoremap <leader>d :action GotoDeclaration<CR>
+nnoremap <leader>i :action GotoImplementation<CR>
+
+
+""" Edit ideavimrc
+nnoremap <leader>e :e ~/.ideavimrc<CR>
+""" Reload vimrc changes
+nnoremap <leader>q :action IdeaVim.ReloadVimRc.reload<CR>
+
+""" Search
+set incsearch
+""" Search for regex in path
+nnoremap <c-/> :action FindInPath<CR>
+""" Action menu
+nnoremap <c-a> :action GotoAction<CR>
+
+set cc=81
